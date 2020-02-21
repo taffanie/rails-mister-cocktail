@@ -1,7 +1,22 @@
-<h1>Taffanie's Cocktails</h1>
 
-<% @cocktails.each do |cocktail| %>
- <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
-<% end %>
+<div class="navbar-lewagon d-flex justify-content-between px-3 mb-3">
+  <h1 class="header-text"><%= link_to "My Cocktail Party", cocktails_path %></h1>
+  <h4 class="btn btn-dark mt-1"><%= link_to "Add a cocktail", new_cocktail_path %></h4>
+</div>
 
-<%= link_to "Add a cocktail", new_cocktail_path %>
+<div class="main-container">
+  <div class="row d-flex justify-content-around">
+    <% @cocktails.each do |cocktail| %>
+     <div class="col-3 m-3">
+        <%= image_tag "https://www.recipetineats.com/wp-content/uploads/2019/09/Frozen-Strawberry-Daiquiri_1.jpg", alt: "alttext" %>
+        <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
+    </div>
+        <% end %>
+  </div>
+</div>
+
+<%# @cocktails.each do |cocktail| %>
+  <%#= link_to cocktail.name, cocktail_path(cocktail) %>
+<%# end %>
+
+
