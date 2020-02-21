@@ -5,4 +5,5 @@
 <%= simple_form_for @cocktail do |f| %>
 <%= f.input :name %>
 <%= f.submit "Add a cocktail" %>
+<%= f.input :photo, as: :file %>
 <% end %>

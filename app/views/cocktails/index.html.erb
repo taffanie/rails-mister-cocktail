@@ -8,7 +8,8 @@
   <div class="row d-flex justify-content-around">
     <% @cocktails.each do |cocktail| %>
      <div class="col-3 m-3">
-        <%= image_tag "https://www.recipetineats.com/wp-content/uploads/2019/09/Frozen-Strawberry-Daiquiri_1.jpg", alt: "alttext" %>
+        <%= cl_image_tag(cocktail.photo.key,
+      width: 400, height: 300, crop: :fill) %>
         <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
     </div>
         <% end %>
