@@ -4,3 +4,9 @@ class Cocktail < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
 end
+
+# has_many :doses equivalent to
+
+# def doses
+#   Dose.where(cocktail_id: :self.id)
+# end

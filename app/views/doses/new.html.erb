@@ -6,3 +6,12 @@
 <%= f.submit "Add dose" %>
 <% end %>
 
+<!-- Pass an ARRAY to collection -->
+
+<!-- The above form generates the below:
+<form action="/cocktails/1/doses" method="post"></form>
+
+When submitted, we will go to the path /cocktails/1/doses (we can find this url in the rails routes) -->
+
+<!-- If we just passed @dose:
+<form action="/doses" method="post"></form> -->
