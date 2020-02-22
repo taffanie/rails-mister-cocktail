@@ -1,6 +1,10 @@
 .navbar-lewagon {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   background: white;
+  padding: 32px;
+  height: 100px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +13,14 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.header-text a {
+  color: black;
+  font-family: 'Varela Round';
+}
+
+.button a {
+  color: black;
+  font-family: 'Varela Round';
 }

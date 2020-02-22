@@ -1,27 +1,32 @@
 
-<div class="navbar-lewagon d-flex justify-content-between px-3 mb-3">
-  <h1 class="header-text"><%= link_to "My Cocktail Party", cocktails_path %></h1>
-  <h4 class="btn btn-dark mt-1"><%= link_to "Add a cocktail", new_cocktail_path %></h4>
+<div class="navbar-lewagon">
+  <h4 class="header-text"><%= link_to ('<i class="fas fa-cocktail"></i> my cocktail party').html_safe, cocktails_path %></h4>
+  <p>change your nights, learn to mix</p>
+  <h6 class="button"><%= link_to ('add a cocktail <i class="fas fa-plus-circle"></i>').html_safe, new_cocktail_path %></h6>
 </div>
 
-<div class="main-container">
-  <div class="row d-flex justify-content-around">
+<div class="large-container">
+  <div class="row">
     <% @cocktails.each do |cocktail| %>
      <div class="col-3 m-3">
         <% if cocktail.photo.attached? %>
-        <%= cl_image_tag cocktail.photo.key,
-      width: 400, height: 300, crop: :fill %>
+        <%= cl_image_tag cocktail.photo.key %>
         <% else %>
         <%= image_tag "https://www.titosvodka.com/static/img/drink-default.svg", alt: "generic" %>
         <% end %>
-        <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
+        <div class="card-words">
+          <h5><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+          <p class="mr-2"><%= link_to ('<i class="fas fa-trash-alt"></i>').html_safe, cocktail_path(cocktail), method: :delete %></p>
+        </div>
     </div>
         <% end %>
   </div>
 </div>
 
+
 <%# @cocktails.each do |cocktail| %>
   <%#= link_to cocktail.name, cocktail_path(cocktail) %>
 <%# end %>
 
-
+<!-- width: 400, height: 300,
+ -->

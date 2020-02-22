@@ -2,21 +2,28 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 16px;
+  height: 250px;
 }
 
 .col-3 img {
-  // background-image: url("https://www.recipetineats.com/wp-content/uploads/2019/09/Frozen-Strawberry-Daiquiri_1.jpg");
-  height: 200px;
-  width: 300px;
+  height: 80%;
+  width: 100%;
+  padding-top: 15px;
+  margin-bottom: 10px;
   object-fit: cover;
-  padding-top: 16px;
 }
 
-// .main-container {
-//   width: 80%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
+.card-words {
+  display: flex;
+  justify-content: space-between;
 
+  a {
+    color: black;
+  }
+}
+
+h5 a {
+  font-family: 'Varela Round';
+}
 
