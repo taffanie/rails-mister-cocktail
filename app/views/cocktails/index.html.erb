@@ -8,8 +8,12 @@
   <div class="row d-flex justify-content-around">
     <% @cocktails.each do |cocktail| %>
      <div class="col-3 m-3">
-        <%= cl_image_tag(cocktail.photo.key,
-      width: 400, height: 300, crop: :fill) %>
+        <% if cocktail.photo.attached? %>
+        <%= cl_image_tag cocktail.photo.key,
+      width: 400, height: 300, crop: :fill %>
+        <% else %>
+        <%= image_tag "https://www.titosvodka.com/static/img/drink-default.svg", alt: "generic" %>
+        <% end %>
         <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
     </div>
         <% end %>
