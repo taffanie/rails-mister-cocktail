@@ -1,9 +1,15 @@
-<h1 class="header-text"><%= link_to "My Cocktail Party", cocktails_path %></h1>
+<div class="navbar-lewagon">
+  <h4 class="header-text"><%= link_to ('<i class="fas fa-cocktail"></i> my cocktail party').html_safe, cocktails_path %></h4>
+  <!-- <p><span id="banner-typed-text"></span></p> -->
+  <h6 class="button"><%= link_to ('add a cocktail <i class="fas fa-plus-circle"></i>').html_safe, new_cocktail_path %></h6>
+</div>
 
-<h1>Add a new cocktail</h1>
-
-<%= simple_form_for @cocktail do |f| %>
-<%= f.input :name %>
-<%= f.input :photo, as: :file %>
-<%= f.submit "Add a cocktail" %>
-<% end %>
+<!-- <h1 class="m-3">Add a new cocktail</h1>
+ -->
+<div class="add-form">
+  <%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Add a cocktail" %>
+  <% end %>
+</div>

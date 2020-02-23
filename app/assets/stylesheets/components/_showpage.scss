@@ -1,3 +1,48 @@
 h1 {
   font-family: 'Varela Round';
 }
+
+* {
+  font-family: 'Varela Round';
+}
+
+table {
+  border-collapse: collapse;
+  width: 20%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: white;
+  margin-left: 16px;
+  margin-bottom: 24px;
+  margin-top: 20px;
+  border-radius: 16px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f4dada;}
+
+td a {
+  font-size: 12px;
+  color: black;
+}
+
+th {
+  font-size: 25px;
+}
+
+.back a {
+  color: black;
+  padding-left: 16px;
+}
+
+.add a {
+  color: black;
+  padding-left: 16px;
+}
+
+.ml-3 {
+  margin-top: 110px;
+}

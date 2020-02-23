@@ -12,6 +12,7 @@ class DosesController < ApplicationController
 # linking the instance of cocktail with the dose
 # equivalent to @dose.cocktail_id = @cocktail_id
     @dose.ingredient = @ingredient
+
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else

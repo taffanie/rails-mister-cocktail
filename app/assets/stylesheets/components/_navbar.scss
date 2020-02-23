@@ -6,6 +6,11 @@
   padding: 32px;
   height: 100px;
   overflow: auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .navbar-lewagon .navbar-collapse {
