@@ -15,8 +15,8 @@
         <%= image_tag "https://www.titosvodka.com/static/img/drink-default.svg", alt: "generic" %>
         <% end %>
         <div class="card-words">
-          <h5><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
-          <p class="mr-2"><%= link_to ('<i class="fas fa-trash-alt"></i>').html_safe, cocktail_path(cocktail), method: :delete %></p>
+          <h5 class="ml-1"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+          <!-- <p class="mr-2"><%#= link_to ('<i class="fas fa-trash-alt"></i>').html_safe, cocktail_path(cocktail), method: :delete %></p> -->
         </div>
     </div>
         <% end %>
