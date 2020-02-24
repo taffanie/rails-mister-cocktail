@@ -11,9 +11,8 @@ table {
   width: 20%;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-color: white;
-  margin-left: 16px;
-  margin-bottom: 24px;
-  margin-top: 20px;
+  margin-left: 25px;
+  margin-top: 150px;
   border-radius: 16px;
   background-color: white;
 }
@@ -46,4 +45,22 @@ th {
 
 .ml-3 {
   margin-top: 110px;
+}
+
+.show-card {
+  display: flex;
+  justify-content: center;
+}
+
+.show-page-photo {
+  margin-top: 150px;
+}
+
+.show-page-photo img {
+  height: 400px;
+  width: 100%;
+  margin-bottom: 30px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 16px;
 }

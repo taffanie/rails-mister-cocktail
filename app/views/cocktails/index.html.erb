@@ -8,19 +8,28 @@
 <div class="large-container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
-     <div class="col-3 m-3">
+     <div class="col-lg-3 col-md-4 col-sm-6 m-3">
         <% if cocktail.photo.attached? %>
         <%= cl_image_tag cocktail.photo.key %>
         <% else %>
         <%= image_tag "https://www.titosvodka.com/static/img/drink-default.svg", alt: "generic" %>
         <% end %>
         <div class="card-words">
-          <h5 class="ml-1"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
-          <!-- <p class="mr-2"><%#= link_to ('<i class="fas fa-trash-alt"></i>').html_safe, cocktail_path(cocktail), method: :delete %></p> -->
+          <h5 class="ml-2"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+          <p class="mr-2"><%= link_to ('<i class="fas fa-trash-alt"></i>').html_safe, cocktail_path(cocktail), method: :delete %></p>
         </div>
     </div>
         <% end %>
   </div>
+</div>
+
+<div class="footer">
+  <div class="footer-copyright">
+    Made with <i class="fas fa-heart"></i> by Taffanie
+  </div>
+<!--   <div class="footer-links">
+    See more of my work here &nbsp;<i class="far fa-hand-point-right"></i><a href="github.com/taffanie"><i class="fab fa-github"></i></a>
+  </div> -->
 </div>
 
 
@@ -30,3 +39,5 @@
 
 <!-- width: 400, height: 300,
  -->
+
+<!-- col-lg-3 col-md-4 col-sm-6 -->

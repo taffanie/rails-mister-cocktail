@@ -4,7 +4,15 @@
   <h6 class="button"><%= link_to ('add a cocktail <i class="fas fa-plus-circle"></i>').html_safe, new_cocktail_path %></h6>
 </div>
 
-<h1 class="ml-3"><%= @cocktail.name %></h1>
+<div class="show-card">
+
+<div class="show-page-photo col-3">
+  <% if @cocktail.photo.attached? %>
+  <%= cl_image_tag @cocktail.photo.key %>
+  <% else %>
+  <%= image_tag "https://www.titosvodka.com/static/img/drink-default.svg", alt: "generic" %>
+  <% end %>
+</div>
 
   <table>
       <tr>
@@ -15,7 +23,9 @@
     <td><strong><%= dose.ingredient.name %></strong> - <%= dose.description %> <%= link_to ('<i class="fas fa-trash-alt"></i>').html_safe, dose_path(dose), method: :delete, data: { confirm: "Are you sure?"} %></td>
   </tr>
   <% end %>
-</table>
+  </table>
+
+</div>
 
 <p class="add"><%= link_to ('<i class="fas fa-plus-circle"></i> add an ingredient').html_safe, new_cocktail_dose_path(@cocktail) %></p>
 
